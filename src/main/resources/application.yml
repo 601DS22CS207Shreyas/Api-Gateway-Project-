@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway-platform
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gateway_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: gateway_user
+    password: gateway_pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+# Replace this secret before any real use. Generate one with:
+#   openssl rand -base64 64
+jwt:
+  secret: "CHANGE_ME_REPLACE_WITH_A_LONG_RANDOM_BASE64_SECRET_AT_LEAST_64_BYTES_LONG"
+  expiration-ms: 86400000   # 24 hours
+
+logging:
+  level:
+    org.springframework.security: INFO
+    com.gateway.platform: DEBUG
