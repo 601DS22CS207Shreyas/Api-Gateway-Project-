@@ -81,3 +81,4 @@ Expected response:
 - `ddl-auto: update` is fine for dev, but you'll want Flyway/Liquibase migrations before this goes anywhere near production.
 - No refresh tokens yet — JWT just expires after 24h and the user has to log in again.
 - No endpoint yet to *list* a user's existing API keys or revoke one — that's a natural Phase 1.5 addition before moving to Phase 2 (gateway routing).
+# Api-Gateway-Project-

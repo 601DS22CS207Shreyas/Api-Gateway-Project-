@@ -7,8 +7,8 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/gateway_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: gateway_user
-    password: gateway_pass
+    username: root
+    password: ShreyasC@17
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
